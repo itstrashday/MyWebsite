@@ -1,0 +1,140 @@
+@import "config";
+@import "utilities";
+
+//General Styles
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto Slab", serif;
+  line-height: 1.6;
+  background: $dark-color;
+}
+
+a {
+  text-decoration: none;
+  color: $medium-color;
+}
+
+ul {
+  list-style: none;
+}
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+}
+
+//Logo
+#logo {
+  width: 70px;
+  height: 70px;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  cursor: pointer;
+
+  &:hover {
+    font-size: 1.8rem;
+    letter-spacing: 8px;
+  }
+}
+
+//Main Nav
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding: 1rem 1.5rem;
+  }
+
+  .nav-link,
+  .current {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+
+    &:hover {
+      border-color: $medium-color;
+    }
+
+    &.current {
+      border-color: $main-color;
+    }
+  }
+}
+
+//Header
+#header {
+  &-home {
+    height: 100vh;
+    color: #fff;
+    z-index: 1;
+
+    .header-content {
+      text-align: center;
+      padding-top: 20%;
+
+      h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+      }
+    }
+  }
+}
+
+//Footer
+#main-footer {
+  color: #fff;
+  height: 5rem;
+  margin-top: -100px;
+  z-index: 2;
+  position: relative;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    max-width: 400px;
+    align-items: center;
+
+    p {
+      font-size: 10px;
+      color: $medium-color;
+    }
+
+    .social-left .fab,
+    .social-right .fab {
+      margin: 1rem;
+      font-size: 22px;
+      color: #fff;
+      border: 2px #fff solid;
+      border-radius: 50%;
+      height: 28px;
+      width: 28px;
+      line-height: 28px;
+      text-align: center;
+      padding: 0.5rem;
+
+      &:hover {
+        background: $main-color;
+        cursor: pointer;
+      }
+    }
+  }
+}
